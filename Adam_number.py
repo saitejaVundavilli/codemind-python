@@ -1,11 +1,13 @@
 a=int(input())
-rev=0
-sq1=a*a
-while a:
-    d=a%10
-    rev=rev*10+d
-    a=a//10
-sq2=rev*rev
-sqt2=str(sq2)
-second=(sqt2[::-1])
-print(sq1==int(second))
+x=a**2
+st=str(a)
+l=st[::-1]
+y=int(l)
+c=y**2
+n=str(c)
+j=n[::-1]
+v=int(j)
+if v==x:
+    print(True)
+else:
+    print(False)
