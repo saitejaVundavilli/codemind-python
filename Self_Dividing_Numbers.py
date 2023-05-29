@@ -1,4 +1,3 @@
-
 def seldivnum(num):
     temp=num
     while temp:
