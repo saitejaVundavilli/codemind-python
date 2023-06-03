@@ -1,16 +1,18 @@
-import math
-def is_prime(n):
-    if n==1:
+def is_prime(a):
+    c=0
+    for i in range(1,a+1):
+        if a%i==0:
+            c+=1
+        else:
+            pass
+    if c==2:
+        return True
+    else:
         return False
-    s=int(math.sqrt(n))
-    for i in range(2,s+1):
-        if n%i==0:
-            return False
-    return True
 n1=int(input())
 n2=int(input())
-for i in range(1,n1+1):
-    s=n1+n2+i
-    if is_prime(s):
+su=n1+n2
+for i in range(1,su):
+    if is_prime(su+i)==True:
         print(i)
         break
