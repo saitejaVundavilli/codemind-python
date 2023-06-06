@@ -1,22 +1,27 @@
-def is_prime(n):
-    if n <= 1:
+def prime(num):
+    if num<2:
         return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
+    for i in range(2,num):
+        if num%i==0:
             return False
-    return True
-
-def find_prime_factors(product):
-    for i in range(2, int(product**0.5) + 1):
-        if product % i == 0 and is_prime(i) and is_prime(product // i):
-            return i, product // i
-    return None
-
-# Example usage
-product = int(input())
-prime_factors = find_prime_factors(product)
-if prime_factors:
-    prime1, prime2 = prime_factors
-    print(prime1, prime2)
+            break
+    else:
+        return True
+        
+a=int(input())
+l=[]
+for i in range(1,a+1):
+    if prime(i)==True:
+        l.append(i)
+l1=[] 
+c=0
+for i in l:
+    for j in l:
+        if i*j==a:
+            l1.append((i,j))
+            c=1
+            break
+if c==1:
+    print(*l1[0])
 else:
-    print("-1")
+    print(-1)
