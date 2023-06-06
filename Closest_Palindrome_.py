@@ -1,19 +1,19 @@
 def is_pal(num):
-    s=str(num)
-    return s==s[::-1]
+    st=str(num)
+    return st==st[::-1]
 a=int(input())
-small=larger=a
+low=high=a
 while True:
-    small-=1
-    if is_pal(small)==True:
+    low-=1
+    if is_pal(low)==True:
         break
 while True:
-    larger+=1
-    if is_pal(larger)==True:
+    high+=1
+    if is_pal(high)==True:
         break
-if abs(small-a) < abs(larger-a):
-    print(small)
-elif abs(small-a) == abs(larger-a):
-    print(small,larger)
+if abs(low-a)<abs(high-a):
+    print(low)
+elif abs(low-a)==abs(high-a):
+    print(low,high)
 else:
-    print(larger)
+    print(high)
